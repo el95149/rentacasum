@@ -1,0 +1,8 @@
+*/.settings/*
+.settings/**
+.classpath
+.project
+.directory
+.dbeaver-data-sources.xml
+*/Scripts/*
+*/target/*

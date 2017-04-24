@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
+	<entity>
+		<entity-name>com.casumo.rentacasum.core.BaseEntity</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>188</entity-height>
+		<entity-X-Coordinate>240</entity-X-Coordinate>
+		<entity-Y-Coordinate>80</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>com.casumo.rentacasum.core.Customer</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>288</entity-height>
+		<entity-X-Coordinate>500</entity-X-Coordinate>
+		<entity-Y-Coordinate>190</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>com.casumo.rentacasum.core.Movie</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>188</entity-height>
+		<entity-X-Coordinate>58</entity-X-Coordinate>
+		<entity-Y-Coordinate>410</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>com.casumo.rentacasum.core.Rental</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>208</entity-height>
+		<entity-X-Coordinate>300</entity-X-Coordinate>
+		<entity-Y-Coordinate>406</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>com.casumo.rentacasum.core.User</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>210</entity-height>
+		<entity-X-Coordinate>700</entity-X-Coordinate>
+		<entity-Y-Coordinate>58</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+</entities>

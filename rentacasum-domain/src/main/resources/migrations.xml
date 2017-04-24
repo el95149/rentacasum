@@ -1,0 +1,93 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-1">
+        <createTable tableName="customer">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="customerPK"/>
+            </column>
+            <column name="createDate" type="TIMESTAMP"/>
+            <column name="createUser" type="BIGINT"/>
+            <column name="isActive" type="BOOLEAN"/>
+            <column name="updateDate" type="TIMESTAMP"/>
+            <column name="updateUser" type="BIGINT"/>
+            <column name="birthday" type="TIMESTAMP"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="firstname" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="lastname" type="VARCHAR(255)"/>
+            <column name="organization" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="promotionCode" type="VARCHAR(255)"/>
+            <column name="totalBonusPoints" type="INT"/>
+            <column name="username" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-2">
+        <createTable tableName="movie">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="moviePK"/>
+            </column>
+            <column name="createDate" type="TIMESTAMP"/>
+            <column name="createUser" type="BIGINT"/>
+            <column name="isActive" type="BOOLEAN"/>
+            <column name="updateDate" type="TIMESTAMP"/>
+            <column name="updateUser" type="BIGINT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="imdbCode" type="VARCHAR(255)"/>
+            <column name="releaseDate" type="TIMESTAMP"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-3">
+        <createTable tableName="rental">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rentalPK"/>
+            </column>
+            <column name="createDate" type="TIMESTAMP"/>
+            <column name="createUser" type="BIGINT"/>
+            <column name="isActive" type="BOOLEAN"/>
+            <column name="updateDate" type="TIMESTAMP"/>
+            <column name="updateUser" type="BIGINT"/>
+            <column name="actualReturnDate" type="TIMESTAMP"/>
+            <column name="bonusPoints" type="INT"/>
+            <column name="declaredReturnDate" type="TIMESTAMP"/>
+            <column name="extraCharge" type="FLOAT"/>
+            <column name="initialCharge" type="FLOAT"/>
+            <column name="rentalDate" type="TIMESTAMP"/>
+            <column name="customer_id" type="BIGINT"/>
+            <column name="movie_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-4">
+        <createTable tableName="store_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="store_userPK"/>
+            </column>
+            <column name="createDate" type="TIMESTAMP"/>
+            <column name="createUser" type="BIGINT"/>
+            <column name="isActive" type="BOOLEAN"/>
+            <column name="updateDate" type="TIMESTAMP"/>
+            <column name="updateUser" type="BIGINT"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="firstname" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="lastname" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-5">
+        <addForeignKeyConstraint baseColumnNames="movie_id" baseTableName="rental" constraintName="FK2xk70r11s5vcm9e2djkaipv2u" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="movie"/>
+    </changeSet>
+    <changeSet author="aanagnostopoulos (generated)" id="1493021209138-6">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="rental" constraintName="FK7jf1f7b8w6jotl5qw1kxn8114" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer"/>
+    </changeSet>
+    <!-- Add initial sample data set -->
+    <changeSet id="20170422-01" author="aanagnostopoulos">
+		<sqlFile path="init_data.sql" />
+	</changeSet>
+</databaseChangeLog>
